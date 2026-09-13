@@ -1,0 +1,40 @@
+.menu-page {
+  padding: 40px 32px;
+  min-height: calc(100vh - 68px);
+  background: #fbf6ee;
+}
+
+.menu-category {
+  margin-bottom: 48px;
+}
+
+.menu-category:last-child {
+  margin-bottom: 0;
+}
+
+.menu-category-title {
+  color: #1a1a1a;              /* was #ffffff — invisible before */
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e2ded4;
+}
+
+.menu-scroll-container {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.menu-scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.menu-scroll-container::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}

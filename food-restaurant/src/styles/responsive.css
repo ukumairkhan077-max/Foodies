@@ -1,0 +1,146 @@
+@media (max-width: 900px) {
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+
+    background: rgba(10, 10, 9, .97);
+
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px;
+
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 8px;
+  }
+
+  .navbar-actions {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .hero-content {
+    width: 65%;
+  }
+
+  .hero-food {
+    width: 55%;
+    right: -80px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .service-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .dishes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .container {
+    width: min(100% - 25px, var(--container));
+  }
+
+  .hero {
+    min-height: 650px;
+  }
+
+  .hero-container {
+    min-height: 650px;
+    align-items: flex-start;
+    padding-top: 130px;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 55px;
+  }
+
+  .hero-food {
+    width: 95%;
+    right: -70px;
+    bottom: 10px;
+  }
+
+  .services-image {
+    display: none;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-item {
+    border-right: none;
+    border-bottom: 1px solid #d7d0c2;
+    padding: 12px 0;
+  }
+
+  .dishes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-preview {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    min-height: 230px;
+  }
+
+  .about-content {
+    padding: 30px 20px;
+  }
+
+  .kitchen-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chef-section {
+    grid-template-columns: 1fr;
+  }
+
+  .chef-image {
+    min-height: 280px;
+  }
+
+  .chef-content {
+    padding: 30px 20px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}

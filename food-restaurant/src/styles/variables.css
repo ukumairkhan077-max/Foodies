@@ -1,0 +1,20 @@
+:root {
+  --primary: #d99a17;
+  --primary-light: #f3c75f;
+  --dark: #10100f;
+  --dark-soft: #181714;
+  --cream: #f7f2e8;
+  --cream-dark: #eee5d5;
+  --white: #ffffff;
+  --text: #171717;
+  --text-light: #77736a;
+  --border: rgba(255, 255, 255, 0.15);
+
+  --font-heading: Georgia, "Times New Roman", serif;
+  --font-body: Arial, Helvetica, sans-serif;
+
+  --container: 1120px;
+
+  --transition: 0.3s ease;
+  --radius: 8px;
+}
