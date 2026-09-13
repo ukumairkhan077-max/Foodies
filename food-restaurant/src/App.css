@@ -348,108 +348,471 @@ main > section:last-child {
 
 
 /* =========================================
-   KITCHEN
+   RESTAURANT GALLERY / KITCHEN
 ========================================= */
 
 .kitchen-chef-wrapper {
-  background: var(--dark);
-  color: #fff;
+  width: 100%;
+  background: #ffffff;
+  color: #222222;
 }
 
+
+/* =========================================
+   KITCHEN SECTION
+========================================= */
+
 .kitchen-section {
-  padding: 22px 0;
+  width: 100%;
+  padding: 40px 0 45px;
+
+  background: #ffffff;
+  color: #222222;
+}
+
+
+/* =========================================
+   KITCHEN HEADER
+========================================= */
+
+.kitchen-header {
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.kitchen-header .section-label {
+  margin: 0 0 8px;
+
+  color: #a67c52 !important;
+
+  font-size: 12px !important;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .kitchen-header h2 {
+  margin: 0;
+
+  color: #222222 !important;
+
   font-family: var(--font-heading);
-  font-size: 23px;
+
+  font-size: 30px !important;
+  font-weight: 600;
+
+  line-height: 1.2;
 }
 
+
+/* =========================================
+   KITCHEN GRID
+========================================= */
+
 .kitchen-grid {
+  width: 100%;
+
   display: grid;
+
   grid-template-columns: repeat(4, 1fr);
+
   gap: 25px;
-  margin-top: 15px;
+
+  margin-top: 20px;
 }
+
+
+/* =========================================
+   KITCHEN STEP
+========================================= */
 
 .kitchen-step {
   position: relative;
+
+  width: 100%;
+
   text-align: center;
+
+  color: #222222;
 }
 
+
+/* =========================================
+   KITCHEN IMAGE
+========================================= */
+
 .kitchen-image {
-  height: 75px;
-  border-radius: 7px;
+  width: 100%;
+  height: 100px;
+
   overflow: hidden;
+
+  border-radius: 8px;
 }
 
 .kitchen-image img {
   width: 100%;
   height: 100%;
+
+  display: block;
+
   object-fit: cover;
+
+  transition: transform 0.4s ease;
 }
 
-.kitchen-step p {
-  font-size: 9px;
-  margin-top: 5px;
-}
-
-.step-arrow {
-  position: absolute;
-  right: -17px;
-  top: 30px;
-  color: var(--primary-light);
+.kitchen-image:hover img {
+  transform: scale(1.04);
 }
 
 
 /* =========================================
-   CHEF
+   STEP TITLE
 ========================================= */
 
-.chef-section {
-  display: grid;
-  grid-template-columns: 45% 55%;
-  height: 230px;
-  border-top: 1px solid rgba(255,255,255,.15);
+.kitchen-step p {
+  display: block !important;
+
+  width: 100%;
+
+  margin: 13px 0 0 !important;
+
+  padding: 0;
+
+  color: #222222 !important;
+
+  font-size: 15px !important;
+  font-weight: 600 !important;
+
+  line-height: 1.4;
+
+  text-align: center;
+
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
-.chef-image {
+
+/* =========================================
+   STEP ARROW
+========================================= */
+
+.step-arrow {
+  position: absolute;
+
+  right: -18px;
+  top: 38px;
+
+  color: #a67c52 !important;
+
+  font-size: 22px;
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .kitchen-section {
+    padding: 35px 0 40px;
+  }
+
+  .kitchen-header h2 {
+    font-size: 27px !important;
+  }
+
+  .kitchen-grid {
+    gap: 18px;
+  }
+
+  .kitchen-step p {
+    font-size: 14px !important;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .kitchen-section {
+    padding: 30px 0 35px;
+  }
+
+  .kitchen-header {
+    margin-bottom: 22px;
+  }
+
+  .kitchen-header h2 {
+    font-size: 24px !important;
+  }
+
+  .kitchen-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 28px 15px;
+  }
+
+  .kitchen-image {
+    height: 100px;
+  }
+
+  .kitchen-step p {
+    font-size: 14px !important;
+  }
+
+  .step-arrow {
+    display: none;
+  }
+
+}
+/* =========================================
+   CHEF
+========================================= */
+/* ========================================
+   CHEF SECTION
+======================================== */
+
+.chef-section {
+  width: 50%;
+  min-height: 320px;
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+
   overflow: hidden;
-  height: 100%;
+
+  background: #ffffff;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+
+/* ========================================
+   CHEF IMAGE
+======================================== */
+
+.chef-image {
+  width: 100%;
+  height: 320px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #f5f5f5;
 }
 
 .chef-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 90%;
+  height: 90%;
+
+  display: block;
+
+  /*
+    contain = shows the complete image
+    without cutting the chef
+  */
+  object-fit: contain;
+  object-position: center;
+
+  transition: transform 0.4s ease;
 }
 
+.chef-image:hover img {
+  transform: scale(1.03);
+}
+
+
+/* ========================================
+   CHEF CONTENT
+======================================== */
+
 .chef-content {
-  padding: 18px 40px;
+  width: 100%;
+  height: 320px;
+
+  padding: 40px 55px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
   overflow: hidden;
 }
 
-.chef-content h2 {
-  font-family: var(--font-heading);
-  font-size: 21px;
-  margin-bottom: 8px;
+
+/* ========================================
+   SECTION LABEL
+======================================== */
+
+.chef-content .section-label {
+  margin: 0 0 12px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+
+  color: #a67c52;
+
+  text-transform: uppercase;
 }
+
+
+/* ========================================
+   CHEF NAME
+======================================== */
+
+.chef-content h2 {
+  margin: 0 0 15px;
+
+  font-family: var(--font-heading);
+
+  font-size: 32px;
+  font-weight: 600;
+
+  line-height: 1.2;
+
+  color: #222222;
+}
+
+
+/* ========================================
+   CHEF DESCRIPTION
+======================================== */
 
 .chef-content p:not(.section-label) {
-  max-width: 380px;
-  font-size: 10px;
-  color: #ccc;
-  line-height: 1.5;
+  margin: 0;
+
+  max-width: 520px;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  line-height: 1.7;
+
+  color: #555555;
 }
 
+
+/* ========================================
+   CHEF SIGNATURE
+======================================== */
+
 .chef-signature {
-  margin-top: 8px;
-  color: var(--primary-light);
+  margin-top: 18px;
+
   font-family: cursive;
-  font-size: 19px;
+
+  font-size: 24px;
+  font-weight: 500;
+
+  color: #a67c52;
+}
+
+
+/* ========================================
+   IMAGE HOVER EFFECT
+======================================== */
+
+.chef-image {
+  position: relative;
+}
+
+.chef-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.03);
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .chef-section {
+    grid-template-columns: 45% 55%;
+  }
+
+  .chef-content {
+    padding: 30px 35px;
+  }
+
+  .chef-content h2 {
+    font-size: 28px;
+  }
+
+  .chef-content p:not(.section-label) {
+    font-size: 14px;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+  .chef-section {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+  }
+
+  .chef-image {
+    height: 280px;
+  }
+
+  .chef-image img {
+    width: 90%;
+    height: 90%;
+  }
+
+  .chef-content {
+    height: auto;
+
+    min-height: 260px;
+
+    padding: 35px 25px;
+  }
+
+  .chef-content h2 {
+    font-size: 26px;
+  }
+
+  .chef-content p:not(.section-label) {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .chef-signature {
+    font-size: 22px;
+  } 
 }
 
 
